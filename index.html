@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booki-Desktop-First</title>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- Conteneur principal -->
+  <div class="container">
+    <!-- Zone de logo et de navigation -->
+    <header>
+      <!-- Zone de Logo -->
+      <div class="logo-container">
+        <a href="index.html"><img src="assets/logo/Booki.png" alt="Booki logo" id="logo-booki"></a>
+      </div>
+
+      <!-- Zone de navigation -->
+      <nav>
+        <!-- Lien vers la page des hébergements -->
+        <div class="navbar-link" id="navbar-link-accommodation">
+          <a href="#hebergements">Hébergements</a>
+        </div>
+        <!-- Lien vers la page des activités -->
+        <div class="navbar-link" id="navbar-link-activities">
+          <a href="#activities">Activités</a>
+        </div>
+        <!-- Lien vers la page de connexion -->
+        <div class="navbar-link" id="navbar-link-sign-up">
+          <a href="#">S'inscrire</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Zone de recherche et filtres -->
+      <!--Titre et sous-titre de la zone de recherche -->
+      <section class="research-filters-section">
+        <div class="research-title">
+          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p class="raleway-information">En plein centre ville ou en pleine nature</p>
+        </div>
+
+        <!-- formulaire de recherche et icone de localisation -->
+        <form action="submit" method="get" class="research-form">
+          <div class="icon-map-container">
+            <i class="fa-solid fa-location-dot" id="icone-maps"></i>
+          </div>
+          <input id="user-input" name="city" type="text" placeholder="Marseille, France">
+          <button class="btn-research" type="submit" aria-label="Rechercher une ville">
+            <span id="research">Rechercher</span>
+            <span id="glass"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </button>
+        </form>
+
+        <!-- Zone de filtres -->
+        <div class="filter-section">
+          <h3>Filtres</h3>
+          <ul class="filter-list">
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements économiques">
+                <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                <span>Économique</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button filter-family" aria-label="Filtrer par hébergements familial">
+                <i class="fa-solid fa-person" aria-hidden="true" id="family-icon"></i>
+                <span>Familial</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements romantiques">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <span>Romantique</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-button" aria-label="Filtrer par hébergements avec animaux autorisés">
+                <i class="fa-solid fa-dog" aria-hidden="true"></i>
+                <span>Animaux autorisés</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- petite zone point informations logements -->
+        <div class="info-message">
+          <span id="info-icon"><i class="fa-solid fa-info" aria-hidden="true"></i></span>
+          <p class="raleway-information">Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
+      </section>
+
+      <!-- Section hébergements trouvés et les plus populaires -->
+      <section class="accommodation-and-popular-section">
+
+        <!-- Zone hébergements trouvés -->
+        <div class="accommodation-container" id="hebergements">
+          <h2 class="raleway-title-section">Hébergements à Marseille</h2>
+          <div class="accommodation-gallery">
+
+            <!-- Première image des hébergements = Auberge La Cannebière -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/auberge_la_cannebiere.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/auberge_la_cannebière.jpg"
+                  alt="Auberge La Cannebière" loading="lazy">
+              </picture>
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Auberge La Cannebière</h5>
+                <p class="card-price">Nuit à partir de 25<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Deuxième image des hébergements = Hotel du port -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/hotel_du_port.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/hotel_du_port.jpg" alt="Hotel du port"
+                  loading="lazy">
+              </picture>
+
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Hôtel du port</h5>
+                <p class="card-price">Nuit à partir de 52<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Troisième image des hébergements = Hotel Les mouettes -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/hotel_les_mouettes.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/hotel_les_mouettes.jpg" alt="Hotel Les mouettes"
+                  loading="lazy">
+              </picture>
+
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Hôtel Les mouettes</h5>
+                <p class="card-price">Nuit à partir de 76<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Quatrième image des hébergements = Hotel de la mer -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/hotel_de_la_mer.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/hotel_de_la_mer.jpg" alt="Hotel de la mer"
+                  loading="lazy">
+              </picture>
+
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Hôtel de la mer</h5>
+                <p class="card-price">Nuit à partir de 46<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cinquième image des hébergements = Auberge Le Panier -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/auberge_le_panier.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/auberge_le_panier.jpg" alt="Auberge Le Panier"
+                  loading="lazy">
+              </picture>
+
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Auberge Le Panier</h5>
+                <p class="card-price">Nuit à partir de 23<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Sixième image des hébergements = Hotel chez Amina -->
+            <article class="accommodation-card card">
+              <picture>
+                <source srcset="assets/img/accommodations/accommodation-small-webp/hotel_chez_amina.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodation-small/hotel_chez_amina.jpg" alt="Hotel chez Amina"
+                  loading="lazy">
+              </picture>
+              <div class="card-details-container accommodation-details-container">
+                <h5 class="raleway-card-title">Hôtel chez Amina</h5>
+                <p class="card-price">Nuit à partir de 96<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="display-more">Afficher plus</p>
+        </div>
+
+        <!-- Zone hébergements les plus populaires -->
+        <div class="most-popular-container">
+          <h2 class="raleway-title-section">Les plus populaires<i class="fa-solid fa-chart-line"></i></h2>
+          <div class="most-popular-gallery">
+
+            <!-- Première image des hébergements les plus populaires = Hotel le soleil du matin -->
+            <article class="most-popular-card card">
+              <picture>
+                <source srcset="assets/img/most-populars/most-populars-small-webp/hotel_le_soleil_du_matin.webp"
+                  type="image/webp">
+                <img src="assets/img/most-populars/most-populars-small-jpg/hotel_le_soleil_du_matin.jpg"
+                  alt="Hotel le soleil du matin" loading="lazy">
+              </picture>
+              <div class="card-details-container most-popular-details-container">
+                <div class="card-details most-popular-details">
+                  <h5 class="raleway-card-title">Hôtel Le soleil du matin</h5>
+                  <p class="card-price">Nuit à partir de 128<strong>€</strong></p>
+                </div>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Deuxième image des hébergements les plus populaires = Au coeur de l'eau chambres d'hôtes -->
+            <article class="most-popular-card card">
+              <picture>
+                <source srcset="assets/img/most-populars/most-populars-small-webp/chambres_dhotes_au_coeur_de_leau.webp"
+                  type="image/webp">
+                <img src="assets/img/most-populars/most-populars-small-jpg/chambres_dhotes_au_coeur_de_leau.jpg"
+                  alt="Chambres d'hôtes Au coeur de l'eau" loading="lazy">
+              </picture>
+              <div class="card-details-container most-popular-details-container">
+                <div class="card-details most-popular-details">
+                  <h5 class="raleway-card-title">Chambres d'hôtes Au coeur de l'eau </h5>
+                  <p class="card-price">Nuit à partir de 71<strong>€</strong></p>
+                </div>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Troisième image des hébergements les plus populaires = Hotel Bleu et Blanc -->
+            <article class="most-popular-card card">
+              <picture>
+                <source srcset="assets/img/most-populars/most-populars-small-webp/hotel_bleu_et_blanc.webp"
+                  type="image/webp">
+                <img src="assets/img/most-populars/most-populars-small-jpg/hotel_bleu_et_blanc.jpg"
+                  alt="Hotel bleu et blanc" loading="lazy">
+              </picture>
+              <div class="card-details-container most-popular-details-container">
+                <div class="card-details most-popular-details">
+                  <h5 class="raleway-card-title">Hôtel Bleu et Blanc</h5>
+                  <p class="card-price">Nuit à partir de 68<strong>€</strong></p>
+                </div>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section activités -->
+      <section class="activities-section" id="activities">
+        <h2 class="raleway-title-section">Activités à Marseille</h2>
+        <div class="activities-gallery">
+
+          <!-- Première image des activités = Vieux port -->
+          <article class="activity-card card">
+            <div class="image-wrapper">
+              <picture>
+                <source srcset="assets/img/activities/activities-small-webp/vieux_port.webp" type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/vieux_port.jpg" alt="Vieux port" loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Vieux port</h5>
+            </div>
+          </article>
+
+          <!-- Deuxième image des activités = Port de Pomègues -->
+          <article class="activity-card card">
+            <div class="image-wrapper">
+              <picture id="pomegues">
+                <source srcset="assets/img/activities//activities-small-webp/port_de_pomegues.webp" type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/port_de_pomegues.jpg" alt="Fort de Pomègues"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Port de Pomègues</h5>
+            </div>
+          </article>
+
+          <!-- Troisième image des activités = Iles du Frioul -->
+          <article class="activity-card card display-none">
+            <div class="image-wrapper">
+              <picture>
+                <source srcset="assets/img/activities/activities-small-webp/iles_du_frioul.webp" type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/iles_du_frioul.jpg" alt="Iles du Frioul"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Iles du Frioul</h5>
+            </div>
+          </article>
+
+          <!-- Quatrième image des activités = Parc National des Calanques -->
+          <article class="activity-card card">
+            <div class="image-wrapper">
+              <picture id="calanques">
+                <source srcset="assets/img/activities/activities-small-webp/parc_national_des_calanques.webp"
+                  type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/parc_national_des_calanques.jpg"
+                  alt="Parc National des Calanques" loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Parc National des Calanques</h5>
+            </div>
+          </article>
+        </div>
+
+        <div class="activities-column">
+
+          <!-- Cinquième image des activités = Notre-Dame-de-la-Garde -->
+          <article class="activity-card card">
+            <div class="image-wrapper">
+              <picture>
+                <source srcset="assets/img/activities/activities-small-webp/notre_dame_de_la_garde.webp"
+                  type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/notre_dame_de_la_garde.jpg"
+                  alt="Notre-Dame-de-la-Garde" loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Notre-Dame-de-la-Garde</h5>
+            </div>
+          </article>
+
+          <!-- Sixième image des activités = Parc Longchamp -->
+          <article class="activity-card card display-none">
+            <div class="image-wrapper">
+              <picture>
+                <source srcset="assets/img/activities/activities-small-webp/parc_longchamp.webp" type="image/webp">
+                <img src="assets/img/activities/activities-small-jpg/parc_longchamp.jpg" alt="Parc Longchamp"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="activity-details">
+              <h5 class="raleway-card-title">Parc Longchamp</h5>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <h4>À propos</h4>
+          <ul class="raleway-footer-li">
+            <li>Fonctionnement du site</li>
+            <li>Conditions générales</li>
+            <li>Données et confidentialité</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nos hébergements</h4>
+          <ul class="raleway-footer-li">
+            <li>Charte de qualité</li>
+            <li>Soumettre votre hôtel</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Assistance</h4>
+          <ul class="raleway-footer-li">
+            <li>Centre d'aide</li>
+            <li>Nous contacter</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
