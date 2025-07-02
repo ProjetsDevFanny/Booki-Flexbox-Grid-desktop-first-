@@ -29,6 +29,7 @@ body {
 
 .container {
   max-width: 1400px;
+  margin: 0 40px;
 }
 
 /* On applique la police de caractère à tous les éléments */
