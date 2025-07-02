@@ -71,13 +71,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: clamp(10px, 2vw, 40px); /* gap entre 10px et 40px: qui s'adapte à la taille de l'écran */
   margin-bottom: 30px;
 }
 
 .filter-list {
   display: flex;
-  gap: 40px;
+  gap: clamp(10px, 2vw, 60px);
   margin: 0;
  }
 

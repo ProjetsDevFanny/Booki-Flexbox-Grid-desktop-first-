@@ -10,7 +10,7 @@
 .activities-gallery {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: clamp(10px, 2vw, 40px);
   margin: 20px 0 30px 0;
 }
 

@@ -1,0 +1,41 @@
+
+/* Masquer l'icône entre 991px et 1044px */
+@media screen and (min-width: 991px) and (max-width: 1044px) {
+  .most-popular-container>h2>i {
+    display: none;
+  }
+}
+
+/* ======tablette = min-width: 768px et max-width: 991px====== */
+
+@media screen and (max-width: 991px) {
+  .filter-section,
+  .filter-button span {
+    font-size: 0.8em;
+  }
+
+  .filter-section {
+    gap: 10px;
+  }
+
+  .filter-button {
+    padding: 0em 1em;
+  }
+
+.accommodation-and-popular-section {
+  flex-direction: column;
+}
+
+.accommodation-container,
+.most-popular-container {
+  width: 100%;
+}
+
+.most-popular-gallery {
+  flex-direction: row;
+}
+
+}
+
+
+

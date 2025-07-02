@@ -1,6 +1,6 @@
 .accommodation-and-popular-section {
   display: flex;
-  gap: 30px;
+  gap: clamp(10px, 2vw, 30px);
 }
 
 /* =========== card =========== */
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .card-price {
@@ -80,7 +81,7 @@
 }
 
 .accommodation-card {
-  height: 186px;
+  min-height: 186px;
   flex-direction: column;
 }
 
@@ -118,11 +119,22 @@
   width: 30%;
 }
 
+.most-popular-container>h2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .most-popular-container>h2>i {
-  transform: translateX(100px);
   color: var(--blue);
   font-size: 17px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 
 .most-popular-gallery {
   display: flex;
@@ -132,22 +144,30 @@
 }
 
 .most-popular-card {
+  /* pour permettre aux cartes de s'adapter au contenu */
+  min-height: 130px;
   height: 130px;
 }
 
 .most-popular-card picture img {
   height: 100%;
-  width: 130px;
+  width: clamp(90px, 9vw, 130px);
   border-radius: 13px 0px 0px 13px;
 }
 
 .most-popular-details-container {
-  padding: 10px 15px 5px 15px;
+  padding: 10px 15px 10px 15px;
 }
 
 .most-popular-details {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  gap: 5px;
+  gap: clamp(1px, 0.2vw, 10px);
+
+}
+
+/* Règle spécifique pour la carte avec titre long */
+#au-coeur-de-leau + .card-details-container .raleway-card-title {
+  font-size: clamp(0.8em, 2.5vw, 1em);
+  line-height: 1;
 }
