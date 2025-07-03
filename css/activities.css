@@ -21,7 +21,9 @@
 }
 
 .image-wrapper {
-  height: 90%;
+  flex: 1;
+  min-height: 0;  /* pour permettre à l'image de se rétrécir quand on diminue la taille d'écran */
+  max-height: calc(100% - 65px);   /* pour limiter la hauteur de l'image et laisser exactement 65px pour .activity-details (que .activity-details ne soit pas écrasé par l'image) */
 }
 
 .activity-card picture img {
@@ -33,5 +35,19 @@
 
 .activity-details {
   padding: 5px 15px 5px 15px;
-  margin: auto 0px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; /* cache le texte qui dépasse d'activity-details */
+  min-width: 0; /* pour permettre au conteneur de se rétrécir */
 }
+
+.activity-details h5 {
+  /* hyphens: auto; */ /*= permet césurer les mots longs automatiquement, = coupe un mot en plusieurs syllabes avec un tiret (-) s’il ne rentre pas sur la ligne.*/
+  line-height: 1.2;
+  overflow-wrap: break-word; /* Permet au texte long sans espace (ex: “LooooongTitleSansEspace”) de se couper à la ligne.*/
+  white-space: normal; /* explique que le texte peut aller à la ligne = par défaut ok, mais je l'explique ici.*/
+  flex-shrink: 1; /*  Permet au titre de rétrécir si l’espace devient trop petit = pour ne pas qu'il déborde du conteneur. */
+}
+

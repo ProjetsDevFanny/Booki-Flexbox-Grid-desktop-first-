@@ -7,11 +7,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: clamp(100px, 2vw, 200px); 
-  /* Ou bien
   justify-content: space-between; 
   width: 80%;
-  */
+  /* Ou bien */
+  /* gap: clamp(100px, 2vw, 200px);  */
 }
 
 .raleway-footer-li {

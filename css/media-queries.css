@@ -1,4 +1,3 @@
-
 /* Masquer l'icône entre 991px et 1044px */
 @media screen and (min-width: 991px) and (max-width: 1044px) {
   .most-popular-container>h2>i {
@@ -6,7 +5,7 @@
   }
 }
 
-/* ======tablette = min-width: 768px et max-width: 991px====== */
+/* ====== tablette = entre 768px et 991px ===== */
 
 @media screen and (max-width: 991px) {
   .filter-section,
@@ -22,20 +21,70 @@
     padding: 0em 1em;
   }
 
-.accommodation-and-popular-section {
+  .accommodation-and-popular-section {
+    flex-direction: column;
+  }
+
+  .accommodation-container,
+  .most-popular-container {
+    width: 100%;
+  }
+
+  .accommodation-details-container {
+    justify-content: space-around;
+  }
+
+  .most-popular-gallery {
+    flex-direction: row;
+  }
+
+  .most-popular-details-container {
+    padding: 5px 10px;
+  }
+
+  .activities-gallery {
+    gap: 40px;
+  }
+
+  .activity-card {
+    height: 300px;
+  }
+
+  .footer-container {
+    width: 95%;
+  }
+}
+
+/* ===== mobile = max-width: 767 px ======= */
+
+@media screen and (max-width: 767px) {
+.container {
+  margin: 20px 20px 0px 20px;
+}
+
+header {
   flex-direction: column;
 }
 
-.accommodation-container,
-.most-popular-container {
+nav {
   width: 100%;
 }
 
-.most-popular-gallery {
-  flex-direction: row;
+.navbar-link {
+  text-align: center;
+}
+
+nav a::before {
+  top: 70px; /* pour placer les éléments ::before sous les liens avec un espacement de 5px */
+  /* Pour que le trait en dessous du lien face toute la largeur de l'écran (pour enlever la margin left et right appliquée au container global: */
+  width: 100vw;
+  left: -20px;
+}
+
+nav a:hover::before {
+  top: 70px; 
+  width: 100vw;
+  left: -20px;
 }
 
 }
-
-
-
