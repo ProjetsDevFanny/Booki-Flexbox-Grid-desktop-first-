@@ -62,6 +62,8 @@
   margin: 20px 20px 0px 20px;
 }
 
+/* logo et navbar */
+
 header {
   flex-direction: column;
 }
@@ -77,14 +79,99 @@ nav {
 nav a::before {
   top: 70px; /* pour placer les éléments ::before sous les liens avec un espacement de 5px */
   /* Pour que le trait en dessous du lien face toute la largeur de l'écran (pour enlever la margin left et right appliquée au container global: */
-  width: 100vw;
+  width: 53.26vw; /* = 767px  */
   left: -20px;
 }
 
 nav a:hover::before {
   top: 70px; 
-  width: 100vw;
+  width: 53.26vw;
   left: -20px;
 }
+
+/* formulaire de recherche */
+
+.btn-research {
+  width: 48px;
+}
+
+#research {
+  display: none;
+}
+
+#glass {
+  display: inline;
+  transition: all 0.2s ease-in-out;
+}
+
+/* filtres */
+
+.filter-section {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.filter-list {
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  width: 160px;
+}
+
+.filter-button span {
+  font-size: 0.8em;
+}
+
+#dog-button {
+  padding: 7px;
+  gap: 5px;
+}
+
+.info-message {
+  margin-top: 30px;
+}
+
+/* section hébergement et les plus populaires */
+
+.accommodation-and-popular-section {
+  flex-direction: column-reverse;
+  position: relative;
+  margin-left: -40px;   /* pour que le fond gris s'étende sur toute la largeur de l'écran */
+  margin-right: -40px;
+  padding-left: 20px;   /* pour que le contenu reste aligné */
+  padding-right: 20px;
+}
+
+.most-popular-container {
+  border-radius:0;
+}
+
+.most-popular-gallery {
+  flex-direction: column;
+}
+
+/* Cibler spécifiquement le h5 de la carte "Chambres d'hôtes Au coeur de l'eau" */
+#au-coeur-de-leau + .card-details-container .raleway-card-title {
+  font-size: 16px;
+}
+
+.most-popular-details-container {
+  padding: 10px 15px 10px 15px;
+}
+
+.most-popular-details {
+
+  gap: 5px;
+}
+  
+ 
+
+
+
+
+
+
 
 }
