@@ -25,24 +25,24 @@
   display: block; /* pas d'espace parasite en dessous, et remplir parfaitement son espace. */
 }
 
-.card-details-container {
+.card-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.card-price {
+.card-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
 
-.icone-star {
+.card-rating {
   display: flex;
   gap: 1px;
 }
 
-.icone-star i {
+.card-rating i {
   font-size: 12px;
   color: var(--dark-grey);
   /* Par défaut, les étoiles sont grises */
@@ -73,7 +73,7 @@
   border-radius: 20px;
 } 
 
-.hebergements-gallery {
+.hebergements-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -91,13 +91,20 @@
   border-radius: 13px 13px 0px 0px;
 }
 
-.hebergement-details-container {
+.hebergement-card-content {
   height: 100%;
   padding: 5px 10px;
+  gap: 4px;
 }
 
-.hebergement-details-container .icone-star {
+.hebergement-card-content .card-rating {
   margin-top: 5px;
+}
+
+.hebergement-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .display-more {

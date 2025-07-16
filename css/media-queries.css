@@ -26,16 +26,16 @@
 
   /* section hébergements et les plus populaires = tablette */
 
-  .accommodation-and-popular-section {
+  .hebergements-and-populaires {
     flex-direction: column;
   }
 
-  .accommodation-container,
+  .hebergements,
   .most-popular-container {
     width: 100%;
   }
 
-  .accommodation-details-container {
+  .hebergement-card-content {
     justify-content: space-around;
   }
 
