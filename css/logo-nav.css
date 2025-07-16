@@ -1,6 +1,6 @@
 /*  desktop first = max-width: 1400px*/
 
-header {
+.logo-nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -4,41 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booki-Desktop-First</title>
+  <title>Booki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/general.css">
-  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/logo-nav.css">
   <link rel="stylesheet" href="css/research-filters.css">
-  <link rel="stylesheet" href="css/accommodation-popular.css">
+  <link rel="stylesheet" href="css/hebergements-and-populaires.css">
   <link rel="stylesheet" href="css/activities.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/media-queries.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
   <!-- Conteneur principal -->
-  <div class="container">
+  <div class="main-container">
     <!-- Zone de logo et de navigation -->
     <header>
-      <!-- Zone de Logo -->
-      <div class="logo-container">
-        <a href="index.html"><img src="assets/logo/Booki.png" alt="Booki logo" id="logo-booki"></a>
+      <div class="logo-nav-container">
+        <!-- Zone de Logo -->
+        <div class="logo-container">
+          <a href="index.html"><img src="assets/logo/Booki.png" alt="Booki logo" id="logo-booki"></a>
+        </div>
+
+        <!-- Zone de navigation -->
+        <nav>
+          <!-- Lien vers la page des hébergements -->
+          <div class="navbar-link" id="navbar-link-accommodation">
+            <a href="#hebergements">Hébergements</a>
+          </div>
+          <!-- Lien vers la page des activités -->
+          <div class="navbar-link" id="navbar-link-activities">
+            <a href="#activities">Activités</a>
+          </div>
+        </nav>
       </div>
 
-      <!-- Zone de navigation -->
-      <nav>
-        <!-- Lien vers la page des hébergements -->
-        <div class="navbar-link" id="navbar-link-accommodation">
-          <a href="#hebergements">Hébergements</a>
-        </div>
-        <!-- Lien vers la page des activités -->
-        <div class="navbar-link" id="navbar-link-activities">
-          <a href="#activities">Activités</a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
       <!-- Zone de recherche et filtres -->
       <!--Titre et sous-titre de la zone de recherche -->
       <section class="research-filters-section">
@@ -82,7 +87,8 @@
               </button>
             </li>
             <li>
-              <button class="filter-button" aria-label="Filtrer par hébergements avec animaux autorisés" id="dog-button">
+              <button class="filter-button" aria-label="Filtrer par hébergements avec animaux autorisés"
+                id="dog-button">
                 <i class="fa-solid fa-dog" aria-hidden="true"></i>
                 <span>Animaux autorisés</span>
               </button>
@@ -96,46 +102,28 @@
           <p class="raleway-information">Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </section>
+    </header>
 
+    <main>
       <!-- Section hébergements trouvés et les plus populaires -->
-      <section class="accommodation-and-popular-section">
+      <section class="hebergements-and-populaires">
 
         <!-- Zone hébergements trouvés -->
-        <div class="accommodation-container" id="hebergements">
+        <div class="hebergements" id="hebergements">
           <h2 class="raleway-title-section">Hébergements à Marseille</h2>
-          <div class="accommodation-gallery">
+          <div class="hebergements-gallery">
 
-            <!-- Première image des hébergements = Auberge La Cannebière -->
-            <article class="accommodation-card card">
+            <!-- Première image des hébergements = Hotel du port -->
+            <article class="hebergement-card card">
               <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/auberge_la_cannebiere.webp"
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/hotel_du_port.webp"
                   type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-jpg/auberge_la_cannebière.jpg"
-                  alt="Auberge La Cannebière" loading="lazy">
-              </picture>
-              <div class="card-details-container accommodation-details-container">
-                <h5 class="raleway-card-title">Auberge La Cannebière</h5>
-                <p class="card-price">Nuit à partir de 25<strong>€</strong></p>
-                <div class="icone-star rating-4">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-              </div>
-            </article>
-
-            <!-- Deuxième image des hébergements = Hotel du port -->
-            <article class="accommodation-card card">
-              <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/hotel_du_port.webp"
-                  type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-jpg/hotel_du_port.jpg" alt="Hotel du port"
-                  loading="lazy">
+                <img src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/hotel_du_port.jpg"
+                  alt="Hotel du port" loading="lazy">
               </picture>
 
-              <div class="card-details-container accommodation-details-container">
+              <div class="card-details-container hebergement-details-container">
                 <h5 class="raleway-card-title">Hôtel du port</h5>
                 <p class="card-price">Nuit à partir de 52<strong>€</strong></p>
                 <div class="icone-star rating-4">
@@ -148,16 +136,39 @@
               </div>
             </article>
 
-            <!-- Troisième image des hébergements = Hotel Les mouettes -->
-            <article class="accommodation-card card">
+            <!-- Deuxième image des hébergements = Hotel chez Amina -->
+            <article class="hebergement-card card">
               <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/hotel_les_mouettes.webp"
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/hotel_chez_amina.webp"
                   type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-jpg/hotel_les_mouettes.jpg" alt="Hotel Les mouettes"
-                  loading="lazy">
+                <img src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/hotel_chez_amina.jpg"
+                  alt="Hotel chez Amina" loading="lazy">
+              </picture>
+              <div class="card-details-container hebergement-details-container">
+                <h5 class="raleway-card-title">Hôtel chez Amina</h5>
+                <p class="card-price">Nuit à partir de 96<strong>€</strong></p>
+                <div class="icone-star rating-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Troisième image des hébergements = Hotel Les mouettes -->
+            <article class="hebergement-card card">
+              <picture>
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/hotel_les_mouettes.webp"
+                  type="image/webp">
+                <img src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/hotel_les_mouettes.jpg"
+                  alt="Hotel Les mouettes" loading="lazy">
               </picture>
 
-              <div class="card-details-container accommodation-details-container">
+              <div class="card-details-container hebergement-details-container">
                 <h5 class="raleway-card-title">Hôtel Les mouettes</h5>
                 <p class="card-price">Nuit à partir de 76<strong>€</strong></p>
                 <div class="icone-star rating-4">
@@ -171,15 +182,16 @@
             </article>
 
             <!-- Quatrième image des hébergements = Hotel de la mer -->
-            <article class="accommodation-card card">
+            <article class="hebergement-card card">
               <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/hotel_de_la_mer.webp"
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/hotel_de_la_mer.webp"
                   type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-jpg/hotel_de_la_mer.jpg" alt="Hotel de la mer"
-                  loading="lazy">
+                <img src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/hotel_de_la_mer.jpg"
+                  alt="Hotel de la mer" loading="lazy">
               </picture>
 
-              <div class="card-details-container accommodation-details-container">
+              <div class="card-details-container hebergement-details-container">
                 <h5 class="raleway-card-title">Hôtel de la mer</h5>
                 <p class="card-price">Nuit à partir de 46<strong>€</strong></p>
                 <div class="icone-star rating-4">
@@ -192,18 +204,19 @@
               </div>
             </article>
 
-            <!-- Cinquième image des hébergements = Auberge Le Panier -->
-            <article class="accommodation-card card">
+            <!-- Cinquième image des hébergements = Auberge La Cannebière -->
+            <article class="hebergement-card card">
               <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/auberge_le_panier.webp"
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/auberge_la_cannebiere.webp"
                   type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-
-                  loading="lazy">
+                <img
+                  src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/auberge_la_cannebiere.jpg"
+                  alt="Auberge La Cannebière" loading="lazy">
               </picture>
-
-              <div class="card-details-container accommodation-details-container">
-                <h5 class="raleway-card-title">Auberge Le Panier</h5>
-                <p class="card-price">Nuit à partir de 23<strong>€</strong></p>
+              <div class="card-details-container hebergement-details-container">
+                <h5 class="raleway-card-title">Auberge La Cannebière</h5>
+                <p class="card-price">Nuit à partir de 25<strong>€</strong></p>
                 <div class="icone-star rating-4">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -214,17 +227,19 @@
               </div>
             </article>
 
-            <!-- Sixième image des hébergements = Hotel chez Amina -->
-            <article class="accommodation-card card">
+            <!-- Sixième image des hébergements = Auberge Le Panier -->
+            <article class="hebergement-card card">
               <picture>
-                <source srcset="assets/img/accommodations/accommodation-large/accommodation-large-webp/hotel_chez_amina.webp"
+                <source
+                  srcset="assets/img/accommodations/accommodations-large/accommodation-large-webp/auberge_le_panier.webp"
                   type="image/webp">
-                <img src="assets/img/accommodations/accommodation-large/accommodation-large-jpg/hotel_chez_amina.jpg" alt="Hotel chez Amina"
-                  loading="lazy">
+                <img src="assets/img/accommodations/accommodations-large/accommodation-large-jpg/auberge_le_panier.jpg"
+                  alt="Auberge Le Panier" loading="lazy">
               </picture>
-              <div class="card-details-container accommodation-details-container">
-                <h5 class="raleway-card-title">Hôtel chez Amina</h5>
-                <p class="card-price">Nuit à partir de 96<strong>€</strong></p>
+
+              <div class="card-details-container hebergement-details-container">
+                <h5 class="raleway-card-title">Auberge Le Panier</h5>
+                <p class="card-price">Nuit à partir de 23<strong>€</strong></p>
                 <div class="icone-star rating-4">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -324,8 +339,10 @@
           <article class="activity-card card">
             <div class="image-wrapper">
               <picture>
-                <source srcset="assets/img/activities/activities-large/activities-large-webp/vieux_port.webp" type="image/webp">
-                <img src="assets/img/activities/activities-large/activities-large-jpg/vieux_port.jpg" alt="Vieux port" loading="lazy">
+                <source srcset="assets/img/activities/activities-large/activities-large-webp/vieux_port.webp"
+                  type="image/webp">
+                <img src="assets/img/activities/activities-large/activities-large-jpg/vieux_port.jpg" alt="Vieux port"
+                  loading="lazy">
               </picture>
             </div>
             <div class="activity-details">
@@ -337,9 +354,10 @@
           <article class="activity-card card">
             <div class="image-wrapper">
               <picture id="pomegues">
-                <source srcset="assets/img/activities/activities-large/activities-large-webp/port_de_pomegues.webp" type="image/webp">
-                <img src="assets/img/activities/activities-large/activities-large-jpg/port_de_pomegues.jpg" alt="Fort de Pomègues"
-                  loading="lazy">
+                <source srcset="assets/img/activities/activities-large/activities-large-webp/port_de_pomegues.webp"
+                  type="image/webp">
+                <img src="assets/img/activities/activities-large/activities-large-jpg/port_de_pomegues.jpg"
+                  alt="Fort de Pomègues" loading="lazy">
               </picture>
             </div>
             <div class="activity-details">
@@ -365,7 +383,8 @@
           <article class="activity-card card">
             <div class="image-wrapper">
               <picture id="calanques">
-                <source srcset="assets/img/activities/activities-large/activities-large-webp/parc_national_des_calanques.webp"
+                <source
+                  srcset="assets/img/activities/activities-large/activities-large-webp/parc_national_des_calanques.webp"
                   type="image/webp">
                 <img src="assets/img/activities/activities-large/activities-large-jpg/parc_national_des_calanques.jpg"
                   alt="Parc National des Calanques" loading="lazy">
@@ -380,7 +399,8 @@
           <article class="activity-card card">
             <div class="image-wrapper">
               <picture id="Notre-Dame-de-la-Garde">
-                <source srcset="assets/img/activities/activities-large/activities-large-webp/notre_dame_de_la_garde.webp"
+                <source
+                  srcset="assets/img/activities/activities-large/activities-large-webp/notre_dame_de_la_garde.webp"
                   type="image/webp">
                 <img src="assets/img/activities/activities-large/activities-large-jpg/notre_dame_de_la_garde.jpg"
                   alt="Notre-Dame-de-la-Garde" loading="lazy">

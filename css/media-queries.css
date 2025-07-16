@@ -67,7 +67,7 @@
 /* ===== mobile = max-width: 767 px ======= */
 
 @media screen and (max-width: 767px) {
-  .container {
+  .main-container {
     margin: 20px 0 0 0;
   }
 
@@ -151,18 +151,24 @@
   }
 
   .most-popular-container {
-    border-radius: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  border-radius: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: visible;
+}
 
   .most-popular-gallery {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  overflow: visible;
+}
 
   .most-popular-card picture img {
-    width: 130px;
-  }
+  width: 130px;
+}
+
+.most-popular-card {
+  overflow: visible;
+}
 
   /* Cibler spécifiquement le h5 de la carte "Chambres d'hôtes Au coeur de l'eau" */
   #au-coeur-de-leau+.card-details-container .raleway-card-title {
@@ -232,5 +238,14 @@
     padding-right: 20px;
     flex-direction: column;
     gap: 50px;
+  }
+}
+
+/* ===== desktop = min-width: 992px ===== */
+
+@media screen and (min-width: 992px) {
+  .activity-details {
+    height: 15px;
+    padding: 2px 15px;
   }
 }
