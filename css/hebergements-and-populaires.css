@@ -101,7 +101,7 @@
   margin-top: 5px;
 }
 
-.hebergement-card-text {
+.hebergement-card-txt {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -119,21 +119,21 @@
 
 /* ============ Les plus populaires ============ */
 
-.most-popular-container {
+.populaires {
   padding: 30px;
   background-color: var(--light-grey);
   border-radius: 20px;
   width: 30%;
 }
 
-.most-popular-container>h2 {
+.populaires-title {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.most-popular-container>h2>i {
+.populaires-title>i {
   color: var(--blue);
   font-size: 17px;
   position: absolute;
@@ -143,38 +143,36 @@
 }
 
 
-.most-popular-gallery {
+.populaires-cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
 }
 
-.most-popular-card {
+.populaires-card {
   /* pour permettre aux cartes de s'adapter au contenu */
   min-height: 130px;
   height: 130px;
 }
 
-.most-popular-card picture img {
+.populaires-card picture img {
   height: 100%;
   width: clamp(90px, 9vw, 130px);
   border-radius: 13px 0px 0px 13px;
 }
 
-.most-popular-details-container {
+.populaires-card-content {
   padding: 10px 15px 10px 15px;
 }
 
-.most-popular-details {
+.populaires-card-txt {
   display: flex;
   flex-direction: column;
-  gap: clamp(1px, 0.2vw, 10px);
-
-}
+  gap: clamp(1px, 0.2vw, 10px);}
 
 /* Règle spécifique pour la carte avec titre long */
-#au-coeur-de-leau + .card-details-container .raleway-card-title {
+#au-coeur-de-leau + .card-content {
   font-size: clamp(0.8em, 2.5vw, 1em);
   line-height: 1;
 }

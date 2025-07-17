@@ -1,4 +1,4 @@
-.activities-section {
+.activities {
   padding: 40px 0px 30px 0px;
 }
 
@@ -7,7 +7,7 @@
   display: none;
 }
 
-.activities-gallery {
+.activities-cards {
   display: flex;
   flex-direction: row;
   gap: clamp(10px, 2vw, 40px);
@@ -33,7 +33,7 @@
   object-position: center;
 }
 
-.activity-details {
+.activity-card-content {
   padding: 5px 15px 5px 15px;
   height: 65px;
   display: flex;
@@ -43,7 +43,7 @@
   min-width: 0; /* pour permettre au conteneur de se rétrécir */
 }
 
-.activity-details h5 {
+.activity-card-txt {
   /* hyphens: auto; */ /*= permet césurer les mots longs automatiquement, = coupe un mot en plusieurs syllabes avec un tiret (-) s’il ne rentre pas sur la ligne.*/
   line-height: 1.2;
   overflow-wrap: break-word; /* Permet au texte long sans espace (ex: “LooooongTitleSansEspace”) de se couper à la ligne.*/
